@@ -22,7 +22,17 @@ This is the main module that handles the core functionality of the P2P chat appl
   - `exchange_handler`: Handles secure key exchanges.
   - `handshake_handler`: Manages the handshake process for initializing secure communication.
 
-### 2. `cipher.py`
+### 2. `udp_plus.py`
+This module provides the UDP-based communication layer for the application.
+- **Classes**:
+  - `UDP_Plus`: Implements reliable UDP communication with support for message chunking, retries, and acknowledgments.
+- **Key Functions**:
+  - `udp_receiver`: Listens for incoming UDP packets and processes them.
+  - `message_sender`: Sends messages, splitting them into chunks if necessary.
+  - `put_message`/`get_message`: API for sending and receiving messages.
+  - `recompose_message`: Reassembles message chunks into the original message.
+
+### 3. `cipher.py`
 This module provides cryptographic utilities for encryption, decryption, signing, and verification.
 - **Classes**:
   - `AES`: Implements AES-GCM-SIV encryption and decryption.
@@ -33,7 +43,7 @@ This module provides cryptographic utilities for encryption, decryption, signing
   - `gen_keypair`: Generates ECC key pairs.
   - `sign`/`verify`: Signs and verifies data using ECC.
 
-### 3. `db.py`
+### 4. `db.py`
 This module manages the SQLite database for storing peer and chat information.
 - **Classes**:
   - `ChatDB`: Handles database operations such as creating tables, inserting, updating, and deleting records.
