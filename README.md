@@ -89,7 +89,7 @@ This module manages the SQLite database for storing peer and chat information.
 - Enhance error handling and logging mechanisms.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the GPL License. See the LICENSE file for details.
 
 ## Acknowledgments
 - [Cryptography Library](https://cryptography.io/) for providing robust cryptographic primitives.
